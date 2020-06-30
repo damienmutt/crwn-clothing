@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import { ReactComponent as Logo } from "../../assets/crown.svg"
+import { ReactComponent as Logo } from "../../assets/crown.svg" // Special syntax to import SVG files as Components
 
 import "./header.styles.scss"
 
@@ -13,8 +13,11 @@ const Header = () => (
             <Link className="option" to="shop">
                 SHOP
             </Link>
-            <Link className="option" to="shop">
+            <Link className="option" to="contact">
                 CONTACT
+            </Link>
+            <Link className="option" to="signin">
+                SIGN IN
             </Link>
         </div>
     </div>
