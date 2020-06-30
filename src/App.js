@@ -18,7 +18,8 @@ class App extends React.Component {
     }
   }
   
-  unsubscribeFromAuth = null; // Firebase auth state listener holder. It'll have unsubscribe functionality.
+  // Firebase auth state listener holder. It'll have unsubscribe functionality.
+  unsubscribeFromAuth = null;
 
   componentDidMount() {
     // Firebase auth state listener. Triggers when user sign-in or out.
@@ -36,7 +37,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
