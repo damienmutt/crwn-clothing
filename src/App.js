@@ -18,7 +18,6 @@ class App extends React.Component {
 
   componentDidMount() {
     const {setCurrentUser} = this.props;
-
     // Firebase auth state listener. Triggers when user sign-in or out.
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if(userAuth){ // logged user!
@@ -51,7 +50,8 @@ class App extends React.Component {
       </div>
     );
   }
-}
+};
+
 const mapStateToProps = ({user}) => ({
   currentUser: user.currentUser
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"; // Main redux obj. to get access to all things related to our "store" (redux nomenclature)
 
 import store from "./redux/store";
 
