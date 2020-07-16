@@ -38,7 +38,7 @@ const Header = ({currentUser, hidden}) => (
     </div>
 );
 
-// Function that allows us to access the state (root-reducer).
+// Function that allows us to access the state (root-reducer) as props for Header const.
 const mapStateToProps = ({ user: {currentUser}, cart: {hidden}}) => ({
     currentUser,
     hidden
