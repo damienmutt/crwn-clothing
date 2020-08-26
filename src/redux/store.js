@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
+import { persistStore } from "redux-persist";
 import logger from "redux-logger";
 import rootReducer from "./root-reducer";
 
@@ -9,8 +10,7 @@ import rootReducer from "./root-reducer";
  * Logger middleware catches the action and it console logs it out for us and then it moves it along.
  */
 const middlewares = [logger];
+export const store = createStore(rootReducer, applyMiddleware(...middlewares)); // Init redux store config & save it into a const.
+export const persistor = persistStore(store); // persist store on refresh.
 
-const store = createStore(rootReducer, applyMiddleware(...middlewares)); // Init redux store config & save it into a const.
-
-
-export default store;
+export default {store, persistor};
